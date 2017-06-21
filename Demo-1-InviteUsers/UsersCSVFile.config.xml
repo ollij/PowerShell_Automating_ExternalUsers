@@ -1,0 +1,43 @@
+﻿<config>
+    <!-- username and password are stored with Credential Manager -->
+    <storedCredential>yourStoredCredentialTarget</storedCredential>
+    <!-- includeFilters defines which users are added to the CSV file, unless they are later removed with exclude filters  -->
+    <includeFilters>
+        <allUsers>false</allUsers>
+        <!-- if allUsers is false, then the members of these groups are added -->
+        <groups>
+            <group>AD Group Name</group>
+        </groups>
+    </includeFilters>
+    <!-- excludeFilter defines which userd should be excluded -->
+    <excludeFilters>
+        <!-- excludeFilter user type spefific exclude filter  -->
+		<excludeFilter>
+			<property>UserType</property>
+			<value>Guest</value>
+		</excludeFilter>
+        <!-- excluding by upn -->
+		<excludeFilter>
+			<property>UserPrincipalName</property>
+			<containsAny>_svc;sync_;admin@;ext-</containsAny>
+		</excludeFilter>
+	</excludeFilters>
+    <!-- definition of csv -->
+	<csv>
+        <!-- number of users in single file -->
+		<linesPerFile>2000</linesPerFile>
+        <!-- first line  -->
+		<header>Email,DisplayName,InvitationText,InviteRedirectUrl,InvitedToApplications,InvitedToGroups,CcEmailAddress,Language</header>
+        <!-- not in use -->
+		<invitationText></invitationText>
+        <!-- not in use -->
+		<inviteRedirectUrl></inviteRedirectUrl>
+        <!-- not in use -->
+		<invitedToApplications></invitedToApplications>
+        <!-- not in use -->
+		<invitedToGroups></invitedToGroups>
+        <!-- not in use -->
+		<ccEmailAddress></ccEmailAddress>        
+		<language>en</language>
+	</csv>
+</config>

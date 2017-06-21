@@ -1,0 +1,6 @@
+﻿<config>
+    <storedCredential>yourStoredCredentialTarget</storedCredential>
+    <inviteRedirectUrl>https://yourtenant.sharepoint.com/sites/site</inviteRedirectUrl>
+	<adGroupForExternalUsers>yourADGroup</adGroupForExternalUsers>
+	<customizedMessageBody>Customized message here</customizedMessageBody>
+</config>
