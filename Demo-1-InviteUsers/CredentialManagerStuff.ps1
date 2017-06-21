@@ -1,5 +1,5 @@
 ﻿ Install-Module CredentialManager 
 
- New-StoredCredential -Target "opaxAdmin" -UserName "olli@opax.onmicrosoft.com" -Password "sss" -Type Generic -Persist LocalMachine
+ New-StoredCredential -Target "yourStoredCredentialTarget" -UserName "you@yourtenant.onmicrosoft.com" -Password "yourPassword" -Type Generic -Persist LocalMachine
 
- Get-StoredCredential -Target "opaxAdmin" 
+ Get-StoredCredential -Target "yourStoredCredentialTarget" 
