@@ -17,7 +17,7 @@ $credentials = Get-StoredCredential -Target $configXml.config.storedCredential
 
 Write-Log "Connectiong Azure AD..."
 
-$connection = Connect-AzureAD -Credential $credentials -TenantId your_tenant_guid
+$connection = Connect-AzureAD -Credential $credentials -TenantId $configXml.config.tenantId
 
 Write-Log "Reading configuration and setting up the message..."
 
